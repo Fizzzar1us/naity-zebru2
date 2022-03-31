@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		
+	</title>
+	<style type="text/css">
+		.box {
+			background-image: url(1.jpg);
+			background-size: 100% 100%;
+			width: 150px;
+			height: 150px;
+			display: none;
+		}
+		.items{
+			position: absolute;
+			height: 150px;
+			width: 150px;
+			top: 20px;
+			background-color: lawngreen;
+			border-radius: 20px;
+			border: 2px solid darkslategray;
+		}
+		.gfish{
+			position: absolute;
+			height: 150px;
+			width: 150px;
+			top: 200px;
+			left: 1500px;
+			transition: 0.2s;
+		}
+		.igl{
+			position: absolute;
+			height: 150px;
+			width: 150px;
+			top: 200px;
+			left: 1500px;
+			transition: 0.2s;
+		}
+		.tri{
+			position: absolute;
+			height: 150px;
+			width: 150px;
+			top: 200px;
+			left: 1500px;
+			transition: 0.2s;
+		}
+		.rfish{
+			position: absolute;
+			height: 150px;
+			width: 150px;
+			top: 200px;
+			left: 1500px;
+			transition: 0.2s;
+		}
+		.mribi{
+			position: absolute;
+			height: 150px;
+			width: 150px;
+			top: 200px;
+			left: 1500px;
+			transition: 0.2s;
+		}
+		.yum{
+			position: absolute;
+			height: 150px;
+			width: 150px;
+			top: 200px;
+			left: 1500px;
+			transition: 0.2s;
+		}
+	</style>
+</head>
+<body>
+	<div style="background-image: url(ocean.jpg); height: 600px; background-size: 100% 100%; padding-top: 400px;">
+		<div class="items" style="left: 20px; background-image: url(ocean.jpg);background-size: 100% 100%;">			
+		</div>
+		<!-- <div class="items" style="left: 220px;"></div> -->
+		<!-- <div class="items" style="left: 420px;"></div> -->
+		<!-- <div class="items" style="left: 620px;"></div> -->
+		<!-- <div class="items" style="left: 820px;"></div> -->
+		<div style="background-color: blueviolet; height: 300px; width: 200px; border-radius: 20px; padding-top: 30px; text-align: center;font-family: Arial;">
+
+		<h1 style="">Найди красную рыбу Осталось попыток: <span class="showScore" style="font-size: 20px;"></span></h1>
+		<button class="btn">начать</button>
+		</div>
+
+
+		<div class="gfish" style="background-image: greenfish.jpg"></div>
+		<div class="igl" style="margin-left: 100px; margin-top: 150px; background-image: iglobruh.jpg;"></div> 
+		<div class="tri" style="margin-left: 200px" src="triangle.jpg"></div> 
+		<div class="rfish" style="margin-left: 300px; margin-top: 150px;" src="redfish.jpg"></div> 
+		<div class="mribi" style="margin-left: 400px; margin-top: 200px; background-image: mnogoribi.jpg;"></div>
+		<div class="yum" style="margin-left: 600px; margin-top: 25px;" src="yum.jpg"></div>
+	</div>
+	<script type="text/javascript">
+		let score = 3
+		document.querySelector(".btn").onclick = function(){
+			document.querySelector(".gfish").style.left = "50px"
+			document.querySelector(".gfish").style.background = "black"
+			document.querySelector(".igl").style.left = "150px"
+			document.querySelector(".igl").style.top = "300px"
+			document.querySelector(".igl").style.background = "black"
+			document.querySelector(".tri").style.left = "10px"
+			document.querySelector(".tri").style.top = "200px"
+			document.querySelector(".tri").style.background = "black"
+			document.querySelector(".rfish").style.left = "100px"
+			document.querySelector(".rfish").style.top = "100px"
+			document.querySelector(".rfish").style.background = "black"
+			document.querySelector(".mribi").style.left = "150px"
+			document.querySelector(".mribi").style.top = "100px"
+			document.querySelector(".mribi").style.background = "black"
+			document.querySelector(".yum").style.left = "500px"
+			document.querySelector(".yum").style.top = "200px"
+			document.querySelector(".yum").style.background = "black"
+		}
+		document.querySelector(".gfish").onclick = function(){
+			alert("не угадал")
+			document.querySelector(".gfish").style.background = "url(greenfish.jpg)"
+			document.querySelector(".gfish").style.backgroundSize = "100% 100%"
+			score = score - 1;
+			document.querySelector(".showScore").innerHTML = score;
+			if(score == 0){
+				alert("ты проиграл")
+						}
+			}
+		document.querySelector(".igl").onclick = function(){
+			alert("не угадал")
+			document.querySelector(".igl").style.background = "url(iglobruh.jpe)"
+			document.querySelector(".igl").style.backgroundSize = "100% 100%"
+			score = score - 1;
+			document.querySelector(".showScore").innerHTML = score;
+			if(score == 0){
+				alert("ты проиграл")
+						}
+			}
+		document.querySelector(".rfish").onclick = function(){
+			alert("вот она! Ты выйграл")
+			score = score - 1
+			document.querySelector(".rfish").style.background = "url(redfish.jpg)"
+			document.querySelector(".rfish").style.backgroundSize = "100% 100%"
+			document.querySelector(".box").style.display = "block"
+			document.querySelector(".showScore").innerHTML = score;
+			if(score == 0){
+				alert("ты проиграл")
+						}
+			}
+		document.querySelector(".tri").onclick = function(){
+			alert("не угадал")
+			document.querySelector(".tri").style.background = "url(triangle.jpg)"
+			document.querySelector(".tri").style.backgroundSize = "100% 100%"
+			score = score - 1;
+			document.querySelector(".showScore").innerHTML = score;
+			if(score == 0){
+				alert("ты проиграл")
+						}
+			}
+		document.querySelector(".mribi").onclick = function(){
+			alert("не угадал")
+			document.querySelector(".mribi").style.background = "url(mnogoribi.jpg)"
+			document.querySelector(".mribi").style.backgroundSize = "100% 100%"
+			score = score - 1;
+			document.querySelector(".showScore").innerHTML = score;
+			if(score == 0){
+				alert("ты проиграл")
+						}
+			}
+		document.querySelector(".yum").onclick = function(){
+			alert("Вкусно, но это не то")
+			document.querySelector(".yum").style.background = "url(yum.jpg)"
+			document.querySelector(".yum").style.backgroundSize = "100% 100%"
+			score = score - 1;
+			document.querySelector(".showScore").innerHTML = score;
+			if(score == 0){
+				alert("ты проиграл")
+						}
+			}
+			if(score == 0){
+				alert("ты проиграл")
+						}
+					
+				
+			
+		
+	</script>
+</body>
+</html>
